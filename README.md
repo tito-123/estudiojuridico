@@ -1,1 +1,1 @@
-apliacion bufete yordy y asociados
+estudio juridico
