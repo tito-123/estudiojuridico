@@ -18,8 +18,19 @@
 <li class="treeview"">
     <a href="#"><i class="fa fa-edit"></i><span>Gestionar tramites</span></a>
 
-    
+    <ul class="treeview-menu">
+               <li class="nav-item">
+    <a href="{{ route('tramiteadmis.index') }}"
+       class="nav-link {{ Request::is('tramiteadmis*') ? 'active' : '' }}">
+        <p>Tramiteadmis</p>
+    </a>
+</li>
+                 
+    </ul>
 
 </li>
+
+
+
 
 

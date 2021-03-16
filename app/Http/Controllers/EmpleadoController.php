@@ -99,7 +99,7 @@ class EmpleadoController extends AppBaseController
      * @return Response
      */
     public function show($id)
-    {
+    {dd("hola");
         //$empleado = $this->empleadoRepository->find($id);
 $empleado = Empleado::find($id);
 //dd($empleado);

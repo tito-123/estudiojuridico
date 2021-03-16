@@ -30,3 +30,6 @@ Route::get('/home', [
 Route::resource('clientes', App\Http\Controllers\ClienteController::class);
 
 Route::resource('empleados', App\Http\Controllers\EmpleadoController::class);
+
+
+Route::resource('tramiteadmis', App\Http\Controllers\tramiteadmiController::class);
