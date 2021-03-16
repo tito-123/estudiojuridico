@@ -6,6 +6,7 @@ use App\Http\Requests\CreatetramiteadmiRequest;
 use App\Http\Requests\UpdatetramiteadmiRequest;
 use App\Repositories\tramiteadmiRepository;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use Flash;
@@ -30,11 +31,17 @@ class tramiteadmiController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $tramiteadmis = $this->tramiteadmiRepository->all();
+      //  $tramiteadmis = $this->tramiteadmiRepository->all();
+     //    $clientes = Cliente::all();
 
+$tramiteadmis = DB::table('clientes as em')
+            ->join('tramiteadmis as u','u.idcliente','=','em.id')
+            ->where('em.deleted_at','=',null)
+            ->select(DB::raw('u.id,em.id as idcliente,em.nombre as nombrecli,em.apellido,u.nombre,u.descripcion,u.tipotramite,u.estado,u.personas,u.cita'))
+            ->get();
 
-       return view('tramiteadmis.index')->with('tramiteadmis', $tramiteadmis);
-       //  return view('tramiteadmis.index',compact('tramiteadmis','clientes'));
+      return view('tramiteadmis.index')->with('tramiteadmis', $tramiteadmis);
+        //return view('tramiteadmis.index',compact('tramiteadmis','cliente'));
     }
 
     /**

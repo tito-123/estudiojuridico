@@ -33,3 +33,5 @@ Route::resource('empleados', App\Http\Controllers\EmpleadoController::class);
 
 
 Route::resource('tramiteadmis', App\Http\Controllers\tramiteadmiController::class);
+
+Route::resource('doctramiteadmis', App\Http\Controllers\DoctramiteadmiController::class);

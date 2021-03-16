@@ -8,7 +8,7 @@
         <th>Estado</th>
         <th>Personas</th>
         <th>Cita</th>
-        <th>Idcliente</th>
+        <th>cliente</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -21,7 +21,7 @@
             <td>{{ $tramiteadmi->estado }}</td>
             <td>{{ $tramiteadmi->personas }}</td>
             <td>{{ $tramiteadmi->cita }}</td>
-            <td>{{ $tramiteadmi->idcliente }}</td>
+            <td>{{ $tramiteadmi->nombrecli }} {{ $tramiteadmi->apellido }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['tramiteadmis.destroy', $tramiteadmi->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
@@ -32,9 +32,7 @@
                             <i class="far fa-edit"></i>
                         </a>
 
-                        <a href="{{ route('tramiteadmis.show', [$tramiteadmi->id]) }}" class='btn btn-default btn-xs'>
-                            <i class="far fa-edit"></i>
-                        </a>
+                        
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
                     {!! Form::close() !!}

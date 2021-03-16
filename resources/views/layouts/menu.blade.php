@@ -34,3 +34,11 @@
 
 
 
+<li class="nav-item">
+    <a href="{{ route('doctramiteadmis.index') }}"
+       class="nav-link {{ Request::is('doctramiteadmis*') ? 'active' : '' }}">
+        <p>Doctramiteadmis</p>
+    </a>
+</li>
+
+
