@@ -6,7 +6,7 @@
         <th>Apellido</th>
         <th>Ci</th>
         <th>Telefono</th>
-        <th>Iduser</th>
+        <th>email</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
             <td>{{ $empleado->apellido }}</td>
             <td>{{ $empleado->ci }}</td>
             <td>{{ $empleado->telefono }}</td>
-            <td>{{ $empleado->iduser }}</td>
+            <td>{{ $empleado->email }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['empleados.destroy', $empleado->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -1,39 +1,37 @@
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+    {!! Form::text('nombre', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 <!-- Apellido Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('apellido', 'Apellido:') !!}
-    {!! Form::text('apellido', null, ['class' => 'form-control']) !!}
+    {!! Form::text('apellido', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 <!-- Ci Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ci', 'Ci:') !!}
-    {!! Form::text('ci', null, ['class' => 'form-control']) !!}
+    {!! Form::text('ci', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Telefono:') !!}
-    {!! Form::text('telefono', null, ['class' => 'form-control']) !!}
+    {!! Form::text('telefono', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 <!-- Domicilio Field -->
 <div class="form-group col-sm-6">
 
     {!! Form::label('domicilio', 'Domicilio:') !!}
-    {!! Form::text('domicilio', null, ['class' => 'form-control']) !!}
+    {!! Form::text('domicilio', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 
 </div>
 <!-- Domicilio Field -->
 <div class="form-group col-sm-6">
-
-    <input type="text" name="iduser" id="iduser">
-
+    {!! Form::hidden('iduser', null, ['class' => 'form-control']) !!}
 </div>
 
 </br>
@@ -46,13 +44,13 @@
 <div class="form-group col-sm-6">
     
     {!! Form::label('name', 'Name:') !!}
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    {!! Form::text('name', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 <!-- Email Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('email', 'Email:') !!}
-    {!! Form::email('email', null, ['class' => 'form-control']) !!}
+    {!! Form::email('email', null, ['class' => 'form-control','autocomplete'=>'off','required autofocus']) !!}
 </div>
 
 
@@ -65,7 +63,8 @@
                     <input type="password"
                            name="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="Password">
+                           autocomplete="off" 
+                           placeholder="Password" required autofocus>
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -81,7 +80,7 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="Retype password">
+                           placeholder="Retype password" required autofocus>
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>

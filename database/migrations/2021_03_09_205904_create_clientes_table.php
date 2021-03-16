@@ -23,7 +23,7 @@ class CreateClientesTable extends Migration
             $table->string('domicilio');
             $table->biginteger('iduser')->unsigned();
             $table->timestamps();
-            $table->softDeletes();
+              $table->softDeletes();
             $table->foreign('iduser')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

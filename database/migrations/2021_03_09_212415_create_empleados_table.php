@@ -22,7 +22,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('telefono');
             $table->biginteger('iduser')->unsigned();
             $table->timestamps();
-            $table->softDeletes();
+              $table->softDeletes();
             $table->foreign('iduser')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

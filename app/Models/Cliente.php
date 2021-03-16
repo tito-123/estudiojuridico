@@ -65,8 +65,8 @@ class Cliente extends Model
         'apellido' => 'required',
         'ci' => 'required|numeric',
         'telefono' => 'required|numeric',
-        'domicilio' => 'required',
-        'iduser' => 'required'
+        'domicilio' => 'required'
+      
     ];
 
     

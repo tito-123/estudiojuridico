@@ -24,11 +24,7 @@ class Empleado extends Model
     use HasFactory;
 
     public $table = 'empleados';
-    
-
-    protected $dates = ['deleted_at'];
-
-
+     protected $dates = ['deleted_at'];
 
     public $fillable = [
         'nombre',
@@ -61,8 +57,8 @@ class Empleado extends Model
         'nombre' => 'required',
         'apellido' => 'required',
         'ci' => 'required|numeric',
-        'telefono' => 'required|numeric',
-        'iduser' => 'required'
+        'telefono' => 'required|numeric'
+      
     ];
 
     

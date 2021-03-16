@@ -7,7 +7,7 @@
         <th>Ci</th>
         <th>Telefono</th>
         <th>Domicilio</th>
-        <th>Iduser</th>
+        <th>Email</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -19,7 +19,8 @@
             <td>{{ $cliente->ci }}</td>
             <td>{{ $cliente->telefono }}</td>
             <td>{{ $cliente->domicilio }}</td>
-            <td>{{ $cliente->iduser }}</td>
+            <td>{{ $cliente->email }}</td>
+
                 <td width="120">
                     {!! Form::open(['route' => ['clientes.destroy', $cliente->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

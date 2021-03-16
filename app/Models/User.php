@@ -10,7 +10,8 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+ public $table = 'users';
+     protected $dates = ['deleted_at'];
     /**
      * The attributes that are mass assignable.
      *
@@ -39,5 +40,18 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+       /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        'name' => 'required',
+        'email' => 'required|email|unique',
+        'password' => 'required',
+       
+      
     ];
 }
